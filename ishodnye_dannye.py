@@ -15,8 +15,8 @@ def ishodnye_dannye1(num):
     osn_nom = abs(b - 2)
     dop = abs(b - 3)
 
-    new_number = f'{vn_elsn} {lac} {ats} {tg} {deltaU} {osn_nom} {dop}'
-    print('Новый номер варианта: ', new_number)
+    # new_number = f'{vn_elsn} {lac} {ats} {tg} {deltaU} {osn_nom} {dop}'
+    print('Новый номер варианта: ', f'{vn_elsn}{lac}{ats}{tg}{deltaU}{osn_nom}{dop}')
 
     # Создаем таблицу (DataFrame) для внешнего электроснабжения
     data1 = {
@@ -57,5 +57,7 @@ def ishodnye_dannye1(num):
     # print(f"Напряжение основной: {main_voltage}")
     # print(f"Резервный вид: {reserve_type}")
     # print(f"Напряжение резервный: {reserve_voltage}")
+
+# Вот бы кто-нибудь вбил большую таблицу за меня...
 
     return str(main_type), int(main_voltage), str(reserve_type), int(reserve_voltage)
