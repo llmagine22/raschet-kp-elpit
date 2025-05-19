@@ -1,12 +1,12 @@
 if __name__ == '__main__':
-    print('Hello World!')
+    pass
 
 from ishodnye_dannye import ishodnye_vn_elsn, ishodnye_lac, ishodnye_ats
 
-num = int(input('Введите последние две цифры номера зачетки: '))
+num = str(input('Введите последние две цифры номера зачетки: '))
 
 main_type, main_voltage, reserve_type, reserve_voltage = ishodnye_vn_elsn(num)
 
+
+
 print(main_type, main_voltage, reserve_type, reserve_voltage)
-
-
