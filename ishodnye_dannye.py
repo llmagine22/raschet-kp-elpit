@@ -101,10 +101,6 @@ def ishodnye_big(num):
 
     df["Система"] = df["Система"].replace(mapping)
 
-    #
-    #
-    #
-
     # Фильтрация данных для Лац
     filtered_data = df[df["Вариант"] == lac]
     lac24 = filtered_data["Лац 24"].values[0]

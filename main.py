@@ -14,3 +14,5 @@ lac24, lac48, lac60, lac220, ats48, ats60, ats220, tg220, deltaU24, deltaU48, de
 
 print(lac24, lac48, lac60,
       lac220, ats48, ats60, ats220, tg220, deltaU24, deltaU48, deltaU60, system, osv_gar, osv_negar, sil, cos)
+
+# первая часть готова
