@@ -29,6 +29,19 @@ def ishodnye_dannye1(num):
 
     df = pd.DataFrame(data1)  # Создание DataFrame
 
+    # Словарь соответствий
+    mapping = {
+        1: "Подстанция районных энергосистем",
+        2: "Тяговая подстанция",
+        3: "Электростанция промышленного предприятия",
+        4: "Дизель-генераторная электростанция",
+        5: "Высоковольтная линия СЦБ (ВЛ СЦБ)"
+    }
+
+    # Замена чисел на названия
+    df["Основной Вид"] = df["Основной Вид"].replace(mapping)
+    df["Резервный вид"] = df["Резервный вид"].replace(mapping)
+
     # Фильтрация данных для варианта "n"
     filtered_data = df[df["Вариант"] == vn_elsn]
 
@@ -45,4 +58,6 @@ def ishodnye_dannye1(num):
     # print(f"Резервный вид: {reserve_type}")
     # print(f"Напряжение резервный: {reserve_voltage}")
 
-    return int(main_type), int(main_voltage), int(reserve_type), int(reserve_voltage)
+
+
+    return str(main_type), int(main_voltage), str(reserve_type), int(reserve_voltage)
