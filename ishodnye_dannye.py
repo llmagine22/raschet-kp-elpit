@@ -127,7 +127,7 @@ def ishodnye_big(num):
     # Фильтрация данных для Системы
     filtered_data = df[df["Вариант"] == osn_nom]
     system = filtered_data["Система"].values[0]
-    if system != 0:
+    if system != "Централизованная":
         system = str(f'Комбинированная {filtered_data["Система"].values[0]}')
     else:
         pass
