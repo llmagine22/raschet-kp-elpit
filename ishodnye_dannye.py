@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def ishodnye_dannye1(num):
     a = int(str(num)[0])
     b = int(str(num)[1])
@@ -45,5 +46,3 @@ def ishodnye_dannye1(num):
     # print(f"Напряжение резервный: {reserve_voltage}")
 
     return int(main_type), int(main_voltage), int(reserve_type), int(reserve_voltage)
-
-
