@@ -114,7 +114,6 @@ def ishodnye_big(num):
 
     # Фильтрация данных для Атс
     filtered_data = df[df["Вариант"] == ats]
-    ats24 = filtered_data["Атс 24"].values[0]
     ats48 = filtered_data["Атс 48"].values[0]
     ats60 = filtered_data["Атс 60"].values[0]
     ats220 = filtered_data["Атс 220"].values[0]
@@ -144,6 +143,6 @@ def ishodnye_big(num):
     sil = filtered_data["Силовое оборудование"].values[0]
     cos = filtered_data["cos"].values[0]
 
-    return 0
-
-
+    return int(lac24), int(lac48), int(lac60), int(lac220), int(ats48), int(ats60), int(ats220), int(
+        tg220), str(deltaU24), str(deltaU48), str(deltaU60), str(system), float(osv_gar), float(osv_negar), float(
+        sil), float(cos)
