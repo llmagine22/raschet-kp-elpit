@@ -50,7 +50,7 @@ def ishodnye_vn_elsn(num):
 
     # Проверка
     # print('Внешнее электроснабжение')
-    # print(f"Основной Вид: {main_type}")
+    # print(f"Основной вид: {main_type}")
     # print(f"Напряжение основной: {main_voltage}")
     # print(f"Резервный вид: {reserve_type}")
     # print(f"Напряжение резервный: {reserve_voltage}")
@@ -127,7 +127,7 @@ def ishodnye_big(num):
     # Фильтрация данных для Системы
     filtered_data = df[df["Вариант"] == osn_nom]
     system = filtered_data["Система"].values[0]
-    if system != 0:
+    if system != "Централизованная":
         system = str(f'Комбинированная {filtered_data["Система"].values[0]}')
     else:
         pass
