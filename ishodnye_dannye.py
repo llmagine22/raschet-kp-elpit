@@ -1,41 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
 import pandas as pd
 
-# num = int(input('Введите последние две цифры номера зачетки: '))
-
-
-def ishodnye_dannye(num):
+def ishodnye_dannye1(num):
     a = int(str(num)[0])
     b = int(str(num)[1])
 
-    print(a, b)
+    # print(a, b)
 
     vn_elsn = abs(a - b)
     lac = abs(a - 1)
     ats = abs(a - 2)
     tg = abs(a - 3)
-    delta_U = abs(b - 1)
+    deltaU = abs(b - 1)
     osn_nom = abs(b - 2)
     dop = abs(b - 3)
 
-    print('Новый номер варианта: ', vn_elsn, lac, ats, tg, delta_U, osn_nom, dop)
+    new_number = f'{vn_elsn} {lac} {ats} {tg} {deltaU} {osn_nom} {dop}'
+    print('Новый номер варианта: ', new_number)
 
     # Создаем таблицу (DataFrame) для внешнего электроснабжения
     data1 = {
@@ -58,10 +38,10 @@ def ishodnye_dannye(num):
     reserve_voltage = filtered_data["Напряжение резервный"].values[0]
 
     # Выводим переменные
-    print('Внешнее электроснабжение')
-    print(f"Основной Вид: {main_type}")
-    print(f"Напряжение основной: {main_voltage}")
-    print(f"Резервный вид: {reserve_type}")
-    print(f"Напряжение резервный: {reserve_voltage}")
+    # print('Внешнее электроснабжение')
+    # print(f"Основной Вид: {main_type}")
+    # print(f"Напряжение основной: {main_voltage}")
+    # print(f"Резервный вид: {reserve_type}")
+    # print(f"Напряжение резервный: {reserve_voltage}")
 
-    return main_type, main_voltage, reserve_type, reserve_voltage
+    return int(main_type), int(main_voltage), int(reserve_type), int(reserve_voltage)
