@@ -37,7 +37,7 @@ def ishodnye_dannye1(num):
     reserve_type = filtered_data["Резервный вид"].values[0]
     reserve_voltage = filtered_data["Напряжение резервный"].values[0]
 
-    # Выводим переменные
+    # Проверка
     # print('Внешнее электроснабжение')
     # print(f"Основной Вид: {main_type}")
     # print(f"Напряжение основной: {main_voltage}")
@@ -45,3 +45,5 @@ def ishodnye_dannye1(num):
     # print(f"Напряжение резервный: {reserve_voltage}")
 
     return int(main_type), int(main_voltage), int(reserve_type), int(reserve_voltage)
+
+
