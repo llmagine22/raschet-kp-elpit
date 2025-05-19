@@ -101,10 +101,6 @@ def ishodnye_big(num):
 
     df["Система"] = df["Система"].replace(mapping)
 
-    #
-    #
-    #
-
     # Фильтрация данных для Лац
     filtered_data = df[df["Вариант"] == lac]
     lac24 = filtered_data["Лац 24"].values[0]
@@ -143,6 +139,6 @@ def ishodnye_big(num):
     sil = filtered_data["Силовое оборудование"].values[0]
     cos = filtered_data["cos"].values[0]
 
-    return int(lac24), int(lac48), int(lac60), int(lac220), int(ats48), int(ats60), int(ats220), int(
+    return float(lac24), float(lac48), float(lac60), float(lac220), float(ats48), float(ats60), float(ats220), float(
         tg220), str(deltaU24), str(deltaU48), str(deltaU60), str(system), float(osv_gar), float(osv_negar), float(
         sil), float(cos)
