@@ -58,6 +58,4 @@ def ishodnye_dannye1(num):
     # print(f"Резервный вид: {reserve_type}")
     # print(f"Напряжение резервный: {reserve_voltage}")
 
-
-
     return str(main_type), int(main_voltage), str(reserve_type), int(reserve_voltage)
